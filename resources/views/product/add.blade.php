@@ -1,4 +1,4 @@
-<div class="modal fade" id="add-item-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="add-product-modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -66,7 +66,7 @@
       success : function(res) {
         if(res.success == true) {
           toastr_msg('success', res.msg);
-          $('#add-item-modal').modal('hide');
+          $('#add-product-modal').modal('hide');
           table.draw();
         } else {
           var flag = 0;
