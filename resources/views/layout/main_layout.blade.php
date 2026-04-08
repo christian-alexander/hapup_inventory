@@ -10,18 +10,18 @@
   <meta name="author" content="">
   <link href="img/logo/logo.png" rel="icon">
   <title>Happy Puppy Inventory</title>
-  <link href="{{ url('ruang-admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-  <link href="{{ url('ruang-admin/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-  <link href="{{ url('ruang-admin/css/ruang-admin.min.css') }}" rel="stylesheet">
+  <link href="{{ url('assets/ruang-admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url('assets/ruang-admin/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url('assets/ruang-admin/css/ruang-admin.min.css') }}" rel="stylesheet">
 
 </head>
 
 <body class="bg-gradient-login">
   <!-- Login Content -->
-  <script src="{{ url('ruang-admin/vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ url('ruang-admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ url('ruang-admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
-  <script src="{{ url('ruang-admin/js/ruang-admin.min.js') }}"></script>
+  <script src="{{ url('assets/ruang-admin/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url('assets/ruang-admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url('assets/ruang-admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+  <script src="{{ url('assets/ruang-admin/js/ruang-admin.min.js') }}"></script>
 
   @yield('content')
 
