@@ -7,7 +7,7 @@
   </a>
   <hr class="sidebar-divider my-0">
   <li class="nav-item active">
-    <a class="nav-link" href="{{ url('/') }}">
+    <a class="nav-link" href="{{ url('/product') }}">
       <i class="fas fa-fw fa-box"></i>
       <span>Produk</span></a>
   </li>

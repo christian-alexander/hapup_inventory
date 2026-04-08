@@ -22,8 +22,8 @@ class ProductController extends Controller
             })
             ->addColumn('action', function($product){
                 return '
-                    <button class="btn btn-sm btn-primary edit-btn" data-id="'.$product->id.'">Edit</button>
-                    <button class="btn btn-sm btn-danger delete-btn" data-id="'.$product->id.'">Delete</button>
+                    <button class="btn btn-sm btn-primary edit-btn" data-id="'.$product->id.'"><i class="fa fa-pencil"></i> Ubah</button>
+                    <button class="btn btn-sm btn-danger delete-btn" data-id="'.$product->id.'"><i class="fa fa-trash"></i> Hapus</button>
                 ';
             })
             ->editColumn('price', function($product){
