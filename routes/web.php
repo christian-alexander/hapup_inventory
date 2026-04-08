@@ -10,4 +10,5 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [ProductController::class, 'index']);
+    Route::get('/product/get_serverside_datatable', [ProductController::class, 'getServersideDatatable']);
 });

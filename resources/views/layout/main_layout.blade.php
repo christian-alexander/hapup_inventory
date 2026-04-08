@@ -15,6 +15,8 @@
   <link href="{{ url('assets/ruang-admin/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
   <link href="{{ url('assets/ruang-admin/css/ruang-admin.min.css') }}" rel="stylesheet">
   <link href="{{ url('/assets/bootstrap-toastr/toastr.min.css') }}" rel="stylesheet">
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.3.7/css/dataTables.bootstrap4.min.css">
 
 </head>
 
@@ -25,6 +27,8 @@
   <script src="{{ url('assets/ruang-admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
   <script src="{{ url('assets/jquery-loading-overlay-1.5.4/src/loadingoverlay.min.js') }}"></script>
   <script src="{{ url('assets/bootstrap-toastr/toastr.min.js') }}"></script>
+  <script src="https://cdn.datatables.net/2.3.7/js/dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/2.3.7/js/dataTables.bootstrap4.min.js"></script>
   <script>
     function show_loading() {
       $.LoadingOverlay("show");
