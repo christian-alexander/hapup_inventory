@@ -26,7 +26,7 @@ class ProductController extends Controller
             ->addColumn('action', function($product){
                 return '
                     <button class="btn btn-sm btn-primary edit-btn" onclick="showEditProductModal('.$product->id.')"><i class="fa fa-edit"></i> Ubah</button>
-                    <button class="btn btn-sm btn-danger delete-btn" data-id="'.$product->id.'"><i class="fa fa-trash"></i> Hapus</button>
+                    <button class="btn btn-sm btn-danger delete-btn" onclick="deleteProduct('.$product->id.')"><i class="fa fa-trash"></i> Hapus</button>
                 ';
             })
             ->editColumn('price', function($product){
@@ -103,6 +103,17 @@ class ProductController extends Controller
 
         $response['success'] = true;
         $response['msg'] = 'Berhasil ubah produk';
+
+        return response()->json($response);
+    }
+
+    public function delete(Request $request, $id){
+        $response = ['success' => false, 'msg' => 'Ada kesalahan, harap coba lagi'];
+
+        Product::find($id)->delete();
+
+        $response['success'] = true;
+        $response['msg'] = 'Berhasil hapus produk';
 
         return response()->json($response);
     }

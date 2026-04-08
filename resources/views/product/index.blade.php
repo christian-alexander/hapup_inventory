@@ -57,5 +57,6 @@
 
   @include('product.add')
   @include('product.edit')
+  @include('product.delete')
 
 @endsection

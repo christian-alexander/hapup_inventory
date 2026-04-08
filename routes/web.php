@@ -16,5 +16,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/product/get_serverside_datatable', [ProductController::class, 'getServersideDatatable']);
     Route::get('/product/{id}', [ProductController::class, 'getProductById']);
     Route::put('/product/{id}', [ProductController::class, 'update']);
+    Route::delete('/product/{id}', [ProductController::class, 'delete']);
     Route::post('/product', [ProductController::class, 'store']);
 });
