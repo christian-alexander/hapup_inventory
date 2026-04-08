@@ -19,13 +19,6 @@
             </tr>
           </thead>
           <tbody>
-            {{-- <tr>
-              <td>Espresso</td>
-              <td>Espresso</td>
-              <td>Espresso</td>
-              <td>Espresso</td>
-              <td>Espresso</td>
-            </tr> --}}
             {{-- serverside --}}
           </tbody>
         </table>
@@ -45,6 +38,16 @@
             {data: 'price', name: 'price'},
             {data: 'stock', name: 'stock'},
             {data: 'action', name: 'action', orderable: false, searchable: false}
+        ],
+        columnDefs: [
+          {
+            targets: 3,
+            type: 'string'
+          },
+          {
+            targets: '_all',
+            className: 'dt-center'
+          }
         ]
     });
   </script>
