@@ -13,16 +13,15 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Login</h1>
                   </div>
-                  <form class="user">
+                  <form class="user" action="javascript:;" id="login-form" onsubmit="login()">
                     <div class="form-group">
-                      <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
-                        placeholder="Email">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                     </div>
                     <div class="form-group">
-                      <a href="index.html" class="btn btn-primary btn-block">Login</a>
+                      <button class="btn btn-primary btn-block">Login</button>
                     </div>
                   </form>
                 </div>
@@ -33,4 +32,49 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function login(){
+      var inputData = new FormData($("#login-form")[0]);
+      $.ajax({
+        url         : "{{ url('/login') }}",
+        data		    : inputData,
+        headers     : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+        processData : false,
+        contentType : false,
+        type        : 'POST',
+        beforeSend: function(){
+          show_loading();
+        },
+        success : function(res) {
+          if(res.success == true) {
+            toastr_msg('success', res.msg);
+
+            // redirect
+            setTimeout(() => {
+              location = "{{ url('/') }}";
+            }, 2000);
+          } else {
+            var flag = 0;
+            if(typeof res.msg === "object"){
+              for (var key in res.msg) {
+                if (flag == 0) {
+                  var obj = res.msg[key];
+                  toastr_msg('warning', obj.toString());
+                }
+                flag++;
+              };
+            }else{
+              toastr_msg('warning', res.msg.toString());
+            }
+
+          }
+          hide_loading();
+        },
+        error: function(jqXHR) {
+          console.log(jqXHR);
+        }
+      });
+    }
+  </script>
 @endsection
