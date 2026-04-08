@@ -13,5 +13,6 @@ Route::middleware(['auth'])->group(function () {
         return redirect()->to('/product');
     });
     Route::get('/product', [ProductController::class, 'index']);
+    Route::post('/product', [ProductController::class, 'store']);
     Route::get('/product/get_serverside_datatable', [ProductController::class, 'getServersideDatatable']);
 });

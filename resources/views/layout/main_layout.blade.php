@@ -48,6 +48,10 @@
 
       toastr[type_](msg_, title_);
     }
+
+    function rupiah(num) {
+      return new Intl.NumberFormat('id-ID').format(num);
+    }
   </script>
 
     <div id="wrapper">
