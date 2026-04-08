@@ -45,9 +45,32 @@
     }
   </script>
 
-  @yield('content')
+    <div id="wrapper">
+    <!-- Sidebar -->
+      @include('layout.menu_bar.sidebar')
+    <!-- Sidebar -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- TopBar -->
+          @include('layout.menu_bar.top_bar')
+        <!-- Topbar -->
+
+        <!-- Container Fluid-->
+        <div class="container-fluid" id="container-wrapper">
+          @yield('content')
+        </div>
+        <!---Container Fluid-->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
 
   <script src="{{ url('assets/ruang-admin/js/ruang-admin.min.js') }}"></script>
+
 </body>
 
 </html>
