@@ -1,4 +1,4 @@
-@extends('layout.main_layout')
+@extends('layout.landing_layout')
 
 @section('content')
   <!-- Login Content -->

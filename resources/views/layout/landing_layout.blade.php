@@ -18,7 +18,7 @@
 
 </head>
 
-<body class="bg-gradient-login">
+<body class="bg-gradient-login" id="page-top">
   <div id="version-ruangadmin" class="d-none"></div>
   <script src="{{ url('assets/ruang-admin/vendor/jquery/jquery.min.js') }}"></script>
   <script src="{{ url('assets/ruang-admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
