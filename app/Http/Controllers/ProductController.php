@@ -77,11 +77,10 @@ class ProductController extends Controller
         return response()->json($response);
     }
 
-    public function update(Request $request){
+    public function update(Request $request, $id){
         $response = ['success' => false, 'msg' => 'Ada kesalahan, harap coba lagi'];
 
         $rules = [
-            'id' => 'required|exists:products,id',
             'name' => 'required',
             'product_category_id' => 'required|numeric|exists:product_categories,id',
             'price' => 'required|numeric|min:1',
@@ -95,7 +94,7 @@ class ProductController extends Controller
             return response()->json($response);
         }
 
-        Product::find($request->id)->update([
+        Product::find($id)->update([
             'name' => $request->name,
             'product_category_id' => $request->product_category_id,
             'price' => $request->price,

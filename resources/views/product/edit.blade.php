@@ -9,8 +9,7 @@
       </div>
       <div class="modal-body">
         <form action="javascript:;" id="edit-product-form" onsubmit="editProduct()">
-          <input type="hidden" name="_method" value="PUT">
-          <input type="hidden" name="id" id="edit-id" value="0">
+          <input type="hidden" id="edit-id" value="0">
           <div class="form-group">
             Nama*
             <input type="text" class="form-control" name="name" id="edit-name" placeholder="Nama Produk" required>
@@ -97,6 +96,7 @@
 
   function editProduct(){
     var inputData = new FormData($("#edit-product-form")[0]);
+    inputData.append('_method', 'PUT');
     $.ajax({
       url         : "{{ url('/product') }}/" + $('#edit-id').val(),
       data		    : inputData,
