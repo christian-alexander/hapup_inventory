@@ -23,6 +23,14 @@
                     <div class="form-group">
                       <button class="btn btn-primary btn-block">Login</button>
                     </div>
+                    <hr>
+                    <div>
+                      demo login : 
+                      <br>
+                      email : admin@gmail.com 
+                      <br>
+                      password : admin
+                    </div>
                   </form>
                 </div>
               </div>
