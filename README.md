@@ -103,6 +103,7 @@ Fokus utama adalah membangun sistem inventory sederhana dengan perhatian pada pe
 # Business Logic 
 ## Login 
 <img src="https://raw.githubusercontent.com/christian-alexander/hapup_inventory/refs/heads/main/docs/login.png">
+
 1. login melalui halaman login dengan mengisikan email dan password 
 2. diverifikasi dengan laravel auth
 3. jika credential salah -> toastr kredensial salah dan diminta login ulang
@@ -111,6 +112,7 @@ Fokus utama adalah membangun sistem inventory sederhana dengan perhatian pada pe
 ## Product 
 ### Index
 <img src="https://raw.githubusercontent.com/christian-alexander/hapup_inventory/refs/heads/main/docs/index.png"> 
+
 1. untuk kesini harus lolos middleware auth dari web.php. jika belum login dan akses url ini, akan redirect ke halaman login.
 2. halaman index product di load, kemudian datatable ajax call ke backend untuk serverside datatable
 3. setiap ada event di tabel (search / page), datatable re render dan call back ke backend untuk get data (behavior datatable) 
@@ -118,6 +120,7 @@ Fokus utama adalah membangun sistem inventory sederhana dengan perhatian pada pe
 
 ### Add
 <img src="https://raw.githubusercontent.com/christian-alexander/hapup_inventory/refs/heads/main/docs/add.png">
+
 1. ketika user klik tombol tambah di index, buka modal popup untuk isian data product
 2. user isi dan klik tombol tambah -> ajax call ke backend
 3. ada validasi inputan di backend, jika salah kembali ke poin #2
@@ -125,6 +128,7 @@ Fokus utama adalah membangun sistem inventory sederhana dengan perhatian pada pe
 
 ### Edit
 <img src="https://raw.githubusercontent.com/christian-alexander/hapup_inventory/refs/heads/main/docs/edit.png">
+
 1. ketika user klik tombol ubah di row tabel product, trigger fungsi untuk call ajax ke backend.
 2. ajax call ke backend untuk mendapatkan data product yang ingin diubah, dengan parameter id product dan on done ajax modal terbuka dengan datanya
 3. user mengubah data dan klik tombol ubah -> ajax call ke backend
@@ -133,6 +137,7 @@ Fokus utama adalah membangun sistem inventory sederhana dengan perhatian pada pe
 
 ### Delete 
 <img src="https://raw.githubusercontent.com/christian-alexander/hapup_inventory/refs/heads/main/docs/delete.png">
+
 1. ketika user klik tombol ubah di row tabel product, munculkan popup konfirmasi hapus.
 2. jika yes, lanjut ajax call ke backend untuk menghapus data 
 3. muncul toastr dengan pesan berhasil hapus
